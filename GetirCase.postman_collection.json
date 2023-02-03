@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "4bc602cc-e04e-4fd4-b7a3-a9b04017611f",
+		"name": "GetirCase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mongodb/recods",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"minCount\": 3,\n    \"startDate\": \"2022-02-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/mongodb/records",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"mongodb",
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redis/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"test\",\n    \"value\": \"2022-02-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/redis",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"redis"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "redis/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"deneme\",\n    \"value\": \"2022-02-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/redis?key=test",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"redis"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inmemory/post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"inmemorytest\",\n    \"value\": \"2022-02-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/inmemory",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"inmemory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inmemory/get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"deneme\",\n    \"value\": \"2022-02-30\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8085/inmemory?key=inmemorytest",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"inmemory"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "inmemorytest"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

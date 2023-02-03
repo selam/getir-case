@@ -1,0 +1,23 @@
+{
+    "application": {
+        "host": "0.0.0.0",
+        "port": 8085
+    },
+    "databases": [
+        {
+            "type": "mongodb",
+            "name": "test",
+            "connection_string": "mongodb://127.0.0.1/test?retryWrites=true"
+        },
+        {
+            "type": "redis",
+            "name": "0",
+            "connection_string": "redis://127.0.0.1/0"
+        },
+        {
+            "type": "inmemory",
+            "name": "inmemory",
+            "connection_string": ""
+        }
+    ]
+}
